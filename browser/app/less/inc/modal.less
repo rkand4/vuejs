@@ -1,0 +1,88 @@
+// Base
+.modal {
+    @media (min-width: @screen-sm-min) {
+        text-align: center;
+
+        &:before {
+            content: '';
+            height: 100%;
+            width: 1px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .modal-dialog {
+            text-align: left;
+            margin: 10px auto;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .close {
+        top: 26px;
+        right: 28px;
+    }
+}
+
+.modal-dialog {
+    .animated(zoomIn, 200ms);
+}
+
+.modal-header {
+    color: @headings-color;
+    position: relative;
+    font-weight: @font-weight-bold;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.modal-header__sub {
+    text-transform: none;
+    margin-top: 5px;
+    color: #a8a8a8;
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: normal;
+}
+
+.modal-content {
+    border-radius: 3px;
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.04);
+}
+
+.modal-footer {
+    padding: 0 30px 30px;
+    text-align: left;
+}
+
+.modal-backdrop {
+    .animated(fadeIn, 200ms);
+}
+
+// Modal confirm
+.modal--confirm {
+    .modal-dialog {
+        text-align: center;
+    }
+}
+
+.modal--confirm__icon {
+    margin-bottom: 15px;
+
+    & > i {
+        .animated(bounceIn, 750ms);
+        .animation-delay(100ms);
+        font-size: 50px;
+    }
+}
+
+.modal--confirm__text {
+    color: @headings-color;
+}
+
+.modal--confirm__sub {
+    color: @text-muted-color;
+    margin-top: 5px;
+    font-size: 13px;
+}
